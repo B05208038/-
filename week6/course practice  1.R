@@ -1,5 +1,6 @@
 #created on Mar 28, 2017 by J_W YEH
 #First course practice
+rm(list=ls(all=TRUE))
 a <- seq (1, 10 ,1)
 y = cos(a)+sin(a/2)
 plot(a,y,
