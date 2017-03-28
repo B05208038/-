@@ -1,6 +1,6 @@
 #this is my first script 
-#created on Mar 28, 2017 by J_Y Juang
-'to have a great habit and stop the forhead data burrn your time up'
+#created on Mar 28, 2017 by J_W YEH
+'to have a great habit and stop the forhead data burnun your time up'
 rm(list=ls(all=TRUE))
 
 'use arrow instead of equal mark'
@@ -28,5 +28,27 @@ f<- 2+2i
 
 #logical : TRUE or FALSE
 g<-TRUE
-F<-FALSE
+h<-FALSE
+#有些單字有特定意義，注意字的顏色!
 #大小寫注意!!
+
+#vector 向量
+#c(1,3,5,7)
+k1 <- c(1,3,5,7,9,11,13)
+class(k1)
+#在向量當中，需要是同一種元素才可
+k2<- c(a,b,c)
+class(k2)
+k3 <- c(a1, a2, a)
+
+#ex:character vector
+m <- c("NTU","GEOG", "2016")
+class(m)
+m1 <- c(g,h)
+m2 <- c(a,g,h)
+class(m1)
+class(m2)
+
+#找出第4個元素
+n1 <- k1[4]
+
