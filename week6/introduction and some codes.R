@@ -1,6 +1,7 @@
 #this is my first script 
 #created on Mar 28, 2017 by J_W YEH
 'to have a great habit and stop the forhead data burnun your time up'
+#press control(CTRL)+L to clear console
 rm(list=ls(all=TRUE))
 
 'use arrow instead of equal mark'
@@ -50,5 +51,36 @@ class(m1)
 class(m2)
 
 #找出第4個元素
+#用心觀察
 n1 <- k1[4]
+n2 <- k1[4:6]
 
+#vector
+p1 <- c(1,2,3,4,9,7,8,5,7,3,6,3,6,7,3,7,8)
+p2 <- p1[12]
+#冒號:a至b
+#中括弧:位置
+p3 <- p1[8:12]
+#挑不規則，特定位置點的數字
+p4 <- p1[c(1,3,4,6,7,8,10,12)]
+
+#number in order
+q1 <- 1:100
+q2 <- c(101:150)
+q3 <- seq(1,20,3)
+#seq(起始, 終點, 距離(增量曾至最接近的數，但小於之))
+q4 <- seq(1, 5, 0.2)
+
+#figure 
+x <- seq(0,5,0.1)
+y <- cos(x)
+#plot:繪製圖表
+plot (x,y)
+plot (x,y, type = "l")
+plot (x,y, type = "p")
+plot (x,y, type = "b")
+plot (x,y, 
+      type = "b", 
+      xlab = "HOUR", ylab = "T air", 
+      main = "hour versus temperature",
+      col = "yellow")
