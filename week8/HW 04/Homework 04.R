@@ -45,3 +45,6 @@ plot(Kilo$Hour[JDR], H,
      cex = 1.5 , 
      pch = 16,
      col = "red")
+#(5)#########################################
+LCLCSV<- cbind(Kilo$Hour[JDR],H, Ta, Td)
+write.table(LCLCSV, file = "LCL.csv", sep = ",", row.names = FALSE)
