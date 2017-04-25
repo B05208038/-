@@ -1,0 +1,68 @@
+#created on 04132017 Dientag by J_W Yeh
+#Homework 05
+rm(list=ls(all=TRUE))
+setwd("C:/Users/acer/NTU_freshman_Introduction_to_Computer_and_Programming_Geography_department/week10/HW05")
+TANK<-read.table("cwb_2006_0101.csv", header = TRUE, sep = ",")
+SHIP<-read.table("cwb_466920_2006.csv", header = TRUE, sep = ",")
+
+#practice 1
+TANK$Dew.point[which(TANK$Dew.point>TANK$T.air|TANK$Dew.point<1)] <-NA
+TANK$RH[which(TANK$RH>100|TANK$RH<1)] <-NA
+layout(matrix(c(1,2,3,2),2,2))
+plot(TANK$Hour,TANK$T.air,
+     type = "b",
+     xlab = "Time (Hour)",
+     ylab = "Temperature", 
+     main = "01012016data",
+     xlim =c(0,24),
+     cex = 1.5 , 
+     pch = 16,
+     col = "red")
+plot(TANK$Hour,TANK$Dew.point,
+     type = "b",
+     xlab = "Time (Hour)",
+     ylab = "Dew Point", 
+     main = "01012016data",
+     xlim =c(0,24),
+     cex = 1.5 , 
+     pch = 16,
+     col = "red")
+plot(TANK$Hour,TANK$RH,
+     type = "b",
+     xlab = "Time (Hour)",
+     ylab = "Relative humidity", 
+     main = "01012016data",
+     xlim =c(0,24),
+     cex = 1.5 , 
+     pch = 16,
+     col = "red")
+dev.copy(jpeg,"plotRR.jpeg")
+dev.off()
+
+#practice2
+nday<-182
+mTa<-NULL
+mTa2<-NULL
+
+for(id2 in c(1:31)){
+  ndata<-seq((id2-1+nday-1)*24+1, (id2-1+nday-1)*24+24)
+  id2.Ta<-SHIP$T.air[ndata]
+  mTa[id2]<-mean(id2.Ta)
+  
+  ndata<-seq((id2-1+nday-1)*24+1, (id2-1+nday-1)*24+24)
+  id2.Ta<-SHIP$Dew.point[ndata]
+  mTa2[id2]<-mean(id2.Ta)
+}
+layout(matrix(1,1))
+montha<-c(1:31)
+MTA<- cbind(mTa, mTa2)
+matplot(montha, MTA,
+        type = "b",
+        xlab = "day",
+        ylab = "mean temperature(du C)", 
+        main = "JulyData",
+        xlim =c(0,31),
+        cex = 1.5 , 
+        pch = c(15,16),
+        col = c(6,7)
+)
