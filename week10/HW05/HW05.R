@@ -35,7 +35,7 @@ plot(TANK$Hour,TANK$RH,
      xlim =c(0,24),
      cex = 1.5 , 
      pch = 16,
-     col = "red")
+     col = "blue")
 dev.copy(jpeg,"plotRR.jpeg")
 dev.off()
 
