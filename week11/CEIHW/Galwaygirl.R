@@ -1,7 +1,6 @@
 rm(list = ls(all = TRUE))
 setwd("C:/Users/acer/NTU_freshman_Introduction_to_Computer_and_Programming_Geography_department/week11/CEIHW")
 Irish<-read.table("Gutin2009.csv", header = TRUE, sep = ",")
-mday <- c(31,28,31,30,31,30,31,31,30,31,30,31) 
 monthlyyearpm10<-NULL
 monthlyyearpm2.5<-NULL
 avgdata<-NULL

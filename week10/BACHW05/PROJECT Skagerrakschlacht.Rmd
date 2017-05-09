@@ -114,7 +114,7 @@ Lutzow<-read.table("Yushan20150210.csv",header = TRUE, sep = ",")
 Archer<-Lutzow[2]*3600/1000
 WCI<-13.12+0.6215*(Lutzow[3])-11.37*(Archer)^0.16+0.3965*(Lutzow[3])*(Archer)^0.16
 PS<-Lutzow[2]/exp(-3844/8200)
-layout(matrix(c(1,3,2,3),2,2))
+layout(matrix(c(1,3,2,4),2,2))
 matplot(Lutzow[1],Lutzow[3],
         type = "o",
         xlab = "Time",
@@ -141,6 +141,7 @@ matplot(Lutzow[1],Lutzow[2],
         pch = c(14),
         cex = 1.5 , 
         col = c(2))
+matplot(NULL)
 dev.copy(jpeg," figure003.jpg")
 dev.off()
 ```
