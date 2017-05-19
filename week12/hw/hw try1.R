@@ -77,11 +77,11 @@ matplot(Hour, acta,
         main = "actual pressure and time",
         pch = c(17),
         cex = 1.5 , 
-        col = c(2))
+        col = c(6))
 legend("topleft",
        c("actual pressure(kPa)"),
        pch = c(17),
-       col = c(2),
+       col = c(6),
        bty = "n")
 dev.copy(jpeg," figure02.jpg")
 dev.off()

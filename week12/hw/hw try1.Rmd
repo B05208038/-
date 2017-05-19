@@ -89,7 +89,7 @@ matplot(Hour, acta,
 legend("topleft",
        c("actual pressure(kPa)"),
        pch = c(17),
-       col = c(2),
+       col = c(4),
        bty = "n")
 dev.copy(jpeg," Alisan.jpg")
 dev.off()
