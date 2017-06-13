@@ -37,13 +37,13 @@ title('Plot of HW')
 grid on
 %%%%
 %2.1
-r = 1.5 .* 10.^7
+r = 1.5
 x = 100:-5:40
 tt = towSt(x, r)
 figure(3)
 plot(tt, x)
 set(gca,'xdir','reverse')
-legend('days take')
+legend('day')
 ylabel('water amount')
 xlabel('time takes')
 title('water plot')
